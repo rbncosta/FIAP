@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Modelo Dados - Projeto CAP2 - Agro" id="75B78AAB-C7A0-9BCB-EAEC-2807B1CD90DE" version="3.5">
+<createdBy>rbnco</createdBy>
+<createdTime>2025-04-15 01:51:35 UTC</createdTime>
+<ownerDesignName>Modelo Dados - Projeto CAP2 - Agro</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>75B78AAB-C7A0-9BCB-EAEC-2807B1CD90DE</designId>
+</OSDM_Design>
