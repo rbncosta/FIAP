@@ -17,7 +17,7 @@ O banco de dados é composto por cinco tabelas principais:
 
 * **Sensores:**
     * Armazena informações sobre os sensores utilizados.
-      ![Sensores](imagens/Sensore.png)
+      ![Sensores](imagens/Sensores.png)
 * **Culturas:**
     * Registra informações sobre as diferentes culturas cultivadas.
     ![Sensores](imagens/Culturas.png)
