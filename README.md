@@ -18,6 +18,7 @@ O banco de dados é composto por cinco tabelas principais:
 * **Sensores:**
     * Armazena informações sobre os sensores utilizados.
     * Atributos: "Código do sensor" (chave primária), "Nome do sensor", "Tipo do sensor", "Objetivo do sensor", "Fabricante do sensor", "Modelo do sensor", "Data de instalação", "Latitude da instalação", "Longitude da instalação", "Valor mínimo", "Valor máximo", "Unidade"
+      ![Sensores](imagens/Sensores.png)
 * **Culturas:**
     * Registra informações sobre as diferentes culturas cultivadas.
     * Atributos: "Código da cultura" (chave primária, "Descrição da cultura", "Tamanho da cultura", "Data prevista de colheita"
