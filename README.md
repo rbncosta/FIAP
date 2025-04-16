@@ -33,42 +33,7 @@ O banco de dados é composto por cinco tabelas principais:
 
 ## 4. Relacionamentos
 
-* 1. Cada SENSOR pode ter uma ou mais MEDIÇÕES
-* Cardinalidade do  relacionamento:
-* Entidade SENSOR:
-* Cardinalidade mínima: 0 ( PODE = nenhum)
-* Cardinalidade máxima: N (muitos/vários)
-* Entidade MEDIÇÕES:
-* Cardinalidade mínima: 1 ( DEVE = um único)
-* Cardinalidade máxima: 1 (um único)
-
-* 2. Cada MEDIÇÃO do sensor  pode ter uma ou nenhuma SUGESTÃO
-* Cardinalidade do  relacionamento:
-* Entidade MEDIÇÃO
-* Cardinalidade mínima: 0 ( PODE = nenhum)
-* Cardinalidade máxima: 1 (um único)
-* Entidade SUGESTÕES
-* Cardinalidade mínima: 1 ( DEVE = um único)
-* Cardinalidade máxima: 1 (um único)
-
-* 3. Cada SUGESTÃO de aplicação pode ter uma ou nenhuma APLICAÇÃO
-* Cardinalidade do  relacionamento:
-* Entidade SUGESTÃO
-* Cardinalidade mínima: 0 ( PODE = nenhum)
-* Cardinalidade máxima: 1 (um único)
-* Entidade APLICAÇÃO
-* Cardinalidade mínima: 1 ( DEVE = um único)
-* Cardinalidade máxima: 1 (um único)
-
-* 4. Cada CULTURA pode ter uma ou nenhuma APLICAÇÃO
-* Cardinalidade do  relacionamento:
-* Entidade CULTURA
-* Cardinalidade mínima: 0 ( PODE = nenhum)
-* Cardinalidade máxima: 1 (um único)
-* Entidade APLICAÇÃO
-* Cardinalidade mínima: 1 ( DEVE = um único)
-* Cardinalidade máxima: 1 (um único)
-
+![Sensores](imagens/Relacionamentos.png)
 
 ## 5. Tecnologias Utilizadas
 
