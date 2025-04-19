@@ -1,0 +1,38 @@
+[
+    {
+        "NOME_FAZENDA": "Fazenda Boa Vista",
+        "LOCALIZACAO": "Mato Grosso do Sul",
+        "ID_RASTREIO": "cafe-1234",
+        "CULTURA": "cafe",
+        "DATA_PLANTIO": "2025-01-05 00:00:00",
+        "CERTIFICACAO": "Fair Trade",
+        "EMISSAO_CO2": null
+    },
+    {
+        "NOME_FAZENDA": "Fazenda Boa Vista",
+        "LOCALIZACAO": "Mato Grosso do Sul",
+        "ID_RASTREIO": "cafe-1234",
+        "CULTURA": "cafe",
+        "DATA_PLANTIO": "2025-01-05 00:00:00",
+        "CERTIFICACAO": "Certificacao Produtos Organicos",
+        "EMISSAO_CO2": null
+    },
+    {
+        "NOME_FAZENDA": "Fazenda Boa Vista",
+        "LOCALIZACAO": "Mato Grosso do Sul",
+        "ID_RASTREIO": "cafe-1234",
+        "CULTURA": "cafe",
+        "DATA_PLANTIO": "2025-01-05 00:00:00",
+        "CERTIFICACAO": "Fair Trade",
+        "EMISSAO_CO2": 75.0
+    },
+    {
+        "NOME_FAZENDA": "Fazenda Boa Vista",
+        "LOCALIZACAO": "Mato Grosso do Sul",
+        "ID_RASTREIO": "cafe-1234",
+        "CULTURA": "cafe",
+        "DATA_PLANTIO": "2025-01-05 00:00:00",
+        "CERTIFICACAO": "Certificacao Produtos Organicos",
+        "EMISSAO_CO2": 75.0
+    }
+]
