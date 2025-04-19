@@ -1,118 +1,43 @@
-# Sistema de Rastreabilidade Agrícola
+# 🌾 Sistema de Rastreabilidade Agro Sustentável
 
-![GitHub](https://img.shields.io/badge/license-MIT-blue) ![Python](https://img.shields.io/badge/python-3.7%2B-blue) ![Oracle](https://img.shields.io/badge/database-Oracle-red) ![Status](https://img.shields.io/badge/status-active-success)
+## 💡 Problema que estamos resolvendo
 
-## Visão Geral
-Sistema completo para gestão da cadeia produtiva agrícola com rastreabilidade desde o produtor até o transporte final dos produtos, garantindo transparência e conformidade.
+No agronegócio, há uma crescente demanda por **transparência, rastreabilidade e sustentabilidade** por parte dos consumidores, certificadoras e mercados exigentes. Atualmente, o consumidor final não tem acesso fácil e confiável às informações sobre:
 
-## Funcionalidades
-### Cadastros
-- **Produtores**: Cadastro completo de fazendas/produtores
-- **Plantios**: Registro de culturas agrícolas
-- **Insumos**: Controle de insumos utilizados
-- **Certificações**: Gestão de certificações
-- **Transportes**: Rastreamento logístico
+- A **origem dos alimentos**
+- Os **insumos utilizados**
+- As **práticas de cultivo**
+- As **certificações ambientais**
+- O impacto ambiental do **transporte**, como a **emissão de CO₂**
 
-### Consultas
-- Listagem completa de cadastros
-- Consulta por código de rastreio
-- Exportação para JSON
+## ✅ Solução proposta
 
-### Administração
-- Exclusão seletiva de registros
-- Limpeza total do banco (com confirmação)
+Desenvolvemos um sistema que permite ao consumidor **rastrear toda a jornada do produto agro**, desde a produção até o ponto de venda. Através de um **ID de rastreio impresso na embalagem**, o usuário pode acessar:
 
-## Tecnologias
-- **Python 3.7+**
-- **Oracle Database**
-- Bibliotecas:
-  - `oracledb` (conexão Oracle)
-  - `python-dotenv` (gerenciamento de variáveis)
-  - `logging` (registro de operações)
+- Quem foi o **produtor rural**
+- Dados do **plantio** e **cultivo**
+- Quais **insumos** foram utilizados (sementes, fertilizantes, defensivos)
+- Quais **certificações** estão envolvidas (orgânico, rastreabilidade, sustentabilidade)
+- **Logística e transporte** utilizados, com cálculo de **emissão de CO₂**
 
-## Instalação
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/rastreabilidade-agricola.git
-cd rastreabilidade-agricola
-Crie e ative ambiente virtual:
+As informações são apresentadas de forma clara, acessível e segura, promovendo confiança e responsabilidade em toda a cadeia.
 
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate    # Windows
-Instale dependências:
+## 🌱 Alinhamento com ESG
 
-```bash
-pip install -r requirements.txt
-Configuração
-Crie um arquivo .env na raiz com:
+Essa solução está totalmente alinhada com os princípios do **ESG (Environmental, Social and Governance)** — um conjunto de práticas que avaliam o compromisso das empresas com:
 
-ini
-DB_HOST=localhost
-DB_PORT=1521
-SERVICE_NAME=ORCL
-DB_USER=usuario
-DB_PASSWORD=senha
-Como Usar
-Execute o sistema:
+- **Meio ambiente (Environmental):** Monitoramento de práticas agrícolas sustentáveis e emissões de carbono
+- **Responsabilidade social (Social):** Valorização do produtor rural e da origem dos alimentos
+- **Governança corporativa (Governance):** Registro e divulgação transparente de dados confiáveis e auditáveis
 
-```bash
-python sistema_rastreabilidade.py
-Menu principal oferece:
+## 🚀 Valor gerado
 
-Cadastros (produtores, plantios, insumos, etc.)
+- Para o **consumidor**: mais confiança e poder de escolha consciente
+- Para o **produtor**: diferencial competitivo e acesso a mercados mais exigentes
+- Para o **varejo**: fortalecimento da marca com responsabilidade socioambiental
+- Para o **meio ambiente**: incentivo a práticas mais sustentáveis
+- Para **investidores e certificadoras**: aderência a práticas **ESG**, cada vez mais exigidas globalmente
 
-Consultas
+---
 
-Administração
-
-Estrutura do Banco
-Principais tabelas:
-
-PRODUTORES (dados dos produtores)
-
-PLANTIOS (informações de culturas)
-
-INSUMOS (materiais utilizados)
-
-CERTIFICACOES (certificações obtidas)
-
-TRANSPORTE (dados logísticos)
-
-Validações
-Implementadas para:
-
-CNPJ (formato XX.XXX.XXX/XXXX-XX)
-
-Telefone ((XX) XXXX-XXXX)
-
-E-mail (padrão RFC 5322)
-
-Datas (DD/MM/AAAA)
-
-Números positivos
-
-Exemplos
-Cadastro de Produtor
-python
-Nome da Fazenda: Fazenda Esperança
-CNPJ: 12.345.678/0001-99
-Localização: São Paulo/SP
-Área: 150.5 hectares
-Saída JSON
-json
-{
-  "id_rastreio": "SP2023SOJA001",
-  "produtor": "Fazenda Esperança",
-  "cultura": "Soja",
-  "data_plantio": "2023-03-15"
-}
-Licença
-MIT - Veja LICENSE para detalhes.
-
-Contato
-Desenvolvido por [Seu Nome] - contato@exemplo.com
-Repositório: github.com/seu-usuario/rastreabilidade-agricola
-
-📌 Atualizado em: 20/04/2025
+> 🔒 Transparência, confiança e sustentabilidade desde a origem até o consumo final.
