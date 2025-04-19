@@ -37,13 +37,13 @@ git clone https://github.com/seu-usuario/rastreabilidade-agricola.git
 cd rastreabilidade-agricola
 Crie e ative ambiente virtual:
 
-bash
+```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate    # Windows
 Instale dependências:
 
-bash
+```bash
 pip install -r requirements.txt
 Configuração
 Crie um arquivo .env na raiz com:
@@ -57,7 +57,7 @@ DB_PASSWORD=senha
 Como Usar
 Execute o sistema:
 
-bash
+```bash
 python sistema_rastreabilidade.py
 Menu principal oferece:
 
