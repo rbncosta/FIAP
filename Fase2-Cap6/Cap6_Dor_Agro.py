@@ -274,13 +274,13 @@ def cadastrar_produtores(conn: oracledb.Connection) -> None:
         logger.info("Iniciando cadastro de produtor")
 
         dados = {
-            "nome_fazenda": input_texto("Nome da Fazenda: ", obrigatorio=True),
+            "nome": input_texto("Nome da Fazenda: ", obrigatorio=True),  # Corrigido para :nome
             "cnpj": input_cnpj(),
-            "localizacao": input_texto("Localização (Cidade/Estado): ", obrigatorio=True),
-            "area_hectares": input_decimal_positivo("Área (hectares): "),
-            "telefone": input_telefone(),
+            "local": input_texto("Localização (Cidade/Estado): ", obrigatorio=True),  # Corrigido para :local
+            "area": input_decimal_positivo("Área (hectares): "),  # Corrigido para :area
+            "tel": input_telefone(),  # Corrigido para :tel
             "email": input_email(),
-            "biografia": input_texto("Biografia (opcional): ")
+            "bio": input_texto("Biografia (opcional): ")  # Corrigido para :bio
         }
 
         sql = """
@@ -367,17 +367,15 @@ def cadastrar_insumos(conn: oracledb.Connection, dados=None) -> None:
         formatar_titulo("CADASTRO DE INSUMOS")
         logger.info("Iniciando cadastro de insumo")
 
-        dados = {
-            "id_plantio": input_inteiro_positivo("ID do Plantio: "),
-            "tipo": input_texto("Tipo de insumo (50 caracteres, ex: Fertilizante): ", max_caracteres=50,
-                                obrigatorio=True),
-            "nome": input_texto("Nome do insumo (100 caracteres, opcional): ", max_caracteres=100),
-            "quantidade": input_decimal_positivo("Quantidade (ex: 10.5): ") if input_opcao(
-                "Incluir quantidade? (S/N): ", ["S", "N"]) == "S" else None,
-            "unidade": input_texto("Unidade (max 10 caracteres, ex: kg, L): ",
-                                   max_caracteres=10) if "quantidade" in dados and dados[
-                "quantidade"] is not None else None
-        }
+        dados = { "id_plantio":input_inteiro_positivo("ID do Plantio: "),
+                   "tipo":input_texto("Tipo de insumo (50 caracteres, ex: Fertilizante): ", max_caracteres=50,
+                                      obrigatorio=True),
+                   "nome":input_texto("Nome do insumo (100 caracteres, opcional): ", max_caracteres=100),
+                   "quantidade":input_decimal_positivo("Quantidade (ex: 10.5): ") if input_opcao(
+                         "Incluir quantidade? (S/N): ", ["S", "N"]) == "S" else None,
+                   "unidade":input_texto("Unidade (max 10 caracteres, ex: kg, L): ",
+                                         max_caracteres=10)
+                 }
 
         # Obter próximo ID disponível
         cursor = conn.cursor()
