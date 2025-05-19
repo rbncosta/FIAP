@@ -8,14 +8,16 @@ O projeto está organizado da seguinte forma:
 
 ```
 Entrega-2/
-├── csv_data/                  # Arquivos CSV com dados de exemplo
-│   ├── t_culturas.csv         # Dados de culturas agrícolas
-│   ├── t_sensores.csv         # Dados de sensores
-│   ├── t_medicoes.csv         # Dados de medições
-│   ├── t_sugestoes.csv        # Dados de sugestões
-│   └── t_aplicacoes.csv       # Dados de aplicações
-├── Fase3_Cap1_Ent2_CRUD.py    # Classe principal para gerenciamento do banco de dados
-└── README.md                  # Este arquivo
+├── csv_data/                         # Arquivos CSV com dados de exemplo
+│   ├── t_culturas.csv                # Dados de culturas agrícolas
+│   ├── t_sensores.csv                # Dados de sensores
+│   ├── t_medicoes.csv                # Dados de medições
+│   ├── t_sugestoes.csv               # Dados de sugestões
+│   └── t_aplicacoes.csv              # Dados de aplicações
+├── Fase3_Cap1_Ent2_CRUD.py           # Classe principal para gerenciamento do banco de dados
+├── Modelo_Relacional.png             # Imagem do modelo relacional
+├── SCRIPT_DDL_PROJETO_FASE2_CAP1.SQL # Script DDL para criação das tabelas do projeto (banco Oracle)
+└── README.md                         # Este arquivo
 ```
 
 ## Modelo Relacional
