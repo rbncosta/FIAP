@@ -21,7 +21,7 @@ O circuito foi construído na plataforma Wokwi utilizando os seguintes component
 
 ### Imagem do Circuito
 
-![Circuito Wokwi](Circuito-img)
+![Circuito Wokwi](Circuito-img.png)
 
 ### Lógica de Controle
 
