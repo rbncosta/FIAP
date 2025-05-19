@@ -1,23 +1,20 @@
-# Sistema de Gerenciamento de Dados Agrícolas
+# Sistema de Coleta de Dados de Sensores Agrícolas
 
-Este projeto implementa um sistema de gerenciamento de dados agrícolas que simula o armazenamento e manipulação de informações sobre culturas, sensores, medições, sugestões e aplicações em um banco de dados SQL.
+Este projeto implementa um sistema de coleta de dados de sensores agrícolas que simula o armazenamento e manipulação de informações sobre culturas, sensores, medições, sugestões e aplicações em um banco de dados Oracle
 
 ## Estrutura do Projeto
 
 O projeto está organizado da seguinte forma:
 
 ```
-projeto_banco_agricola/
+Entrega-2/
 ├── csv_data/                  # Arquivos CSV com dados de exemplo
 │   ├── t_culturas.csv         # Dados de culturas agrícolas
 │   ├── t_sensores.csv         # Dados de sensores
 │   ├── t_medicoes.csv         # Dados de medições
 │   ├── t_sugestoes.csv        # Dados de sugestões
 │   └── t_aplicacoes.csv       # Dados de aplicações
-├── python_code/               # Código Python para operações CRUD
-│   └── agricola_db_manager.py # Classe principal para gerenciamento do banco de dados
-├── SCRIPT_DDL_PROJETO_FASE2_CAP1.SQL  # Script SQL para criação das tabelas
-├── justificativa_estrutura.md # Justificativa da estrutura de dados e relação com o MER
+├── Fase3_Cap1_Ent2_CRUD.py    # Classe principal para gerenciamento do banco de dados
 └── README.md                  # Este arquivo
 ```
 
@@ -59,7 +56,7 @@ Os relacionamentos do MER foram implementados através de chaves estrangeiras:
 - Uma aplicação é baseada em uma sugestão: `T_APLICACOES.cod_sugestao`, `T_APLICACOES.cod_medicao` e `T_APLICACOES.cod_sensor` referenciam `T_SUGESTOES.cod_sugestao`, `T_SUGESTOES.cod_medicao` e `T_SUGESTOES.cod_sensor`
 - Uma aplicação é realizada em uma cultura: `T_APLICACOES.cod_cultura` referencia `T_CULTURAS.cod_cultura`
 
-Para uma análise mais detalhada da relação entre o MER e a implementação, consulte o arquivo [justificativa_estrutura.md](justificativa_estrutura.md).
+Para uma análise mais detalhada da relação entre o MER e a implementação, consulte os arquivos da Fase 2.
 
 ## Arquivos CSV de Exemplo
 
@@ -144,47 +141,41 @@ Além das operações CRUD básicas, o sistema implementa consultas analíticas 
 ### Pré-requisitos
 
 - Python 3.6 ou superior
-- SQLite3
+- Oracle
 
 ### Configuração
 
 1. Clone o repositório ou extraia os arquivos para uma pasta local
-2. Certifique-se de que o script SQL e os arquivos CSV estão nos locais corretos
+2. Certifique-se de que o script Oracle e os arquivos CSV estão nos locais corretos
 
 ### Execução
 
 1. Execute o script Python principal:
 
 ```bash
-python agricola_db_manager.py
+Fase3_Cap1_Ent2_CRUD.py
 ```
+2. Execute o script de criação da tabelas no banco de dados Oracle
 
-2. O script irá:
-   - Criar o banco de dados SQLite
+SCRIPT_DDL_PROJETO_FASE2_CAP1.sql
+
+3. O script irá:
+   - Conectar no banco de dados
    - Importar os dados dos arquivos CSV
    - Demonstrar operações CRUD básicas
    - Executar consultas analíticas de exemplo
 
-### Personalização
-
-Você pode modificar o script principal para:
-
-- Adicionar novas culturas, sensores, medições, etc.
-- Implementar consultas personalizadas
-- Exportar resultados para arquivos CSV ou outros formatos
-
 ## Justificativa da Estrutura de Dados
 
-A estrutura de dados escolhida (SQLite) oferece um equilíbrio ideal entre simplicidade, desempenho e fidelidade ao modelo entidade-relacionamento original. As principais vantagens incluem:
+Para este projeto, optamos por uma estrutura de dados relacional implementada em Oracle, que oferece um equilíbrio ideal entre robustez, desempenho e fidelidade ao modelo entidade-relacionamento (MER) original. A escolha do Oracle como sistema de gerenciamento de banco de dados se justifica pelos seguintes fatores:
 
-1. **Portabilidade**: O banco de dados inteiro é armazenado em um único arquivo
-2. **Simplicidade**: Não requer configuração de servidor
-3. **Compatibilidade com Python**: Integração nativa através da biblioteca sqlite3
-4. **Suporte completo a SQL**: Permite implementar todas as operações necessárias
-5. **Integridade referencial**: Garante a consistência dos dados
-
-Para uma análise mais detalhada da estrutura de dados e sua relação com o MER, consulte o arquivo [justificativa_estrutura.md](justificativa_estrutura.md).
-
+1. **Robustez**: O Oracle é um SGBD de nível empresarial, capaz de lidar com grandes volumes de dados e operações complexas.
+2. **Confiabilidade**: Oferece recursos avançados de recuperação e alta disponibilidade, essenciais para dados críticos agrícolas.
+3. **Segurança**: Fornece mecanismos robustos de controle de acesso e proteção de dados.
+4. **Suporte completo a linguagem Transact-SQL**: Permite implementar todas as operações CRUD e consultas complexas necessárias.
+5. **Integridade referencial**: Suporta chaves estrangeiras e restrições de integridade, essenciais para manter a consistência do modelo relacional.
+6. **Funções avançadas de data/hora**: Oferece funções como TO_DATE e TO_TIMESTAMP que facilitam o trabalho com dados temporais, importantes para registros de medições e aplicações.
+   
 ## Conclusão
 
-Este sistema demonstra a implementação de um banco de dados relacional para gerenciamento de dados agrícolas, seguindo fielmente o modelo entidade-relacionamento definido na Fase 2 do projeto. A implementação em Python, com a classe `AgricolaDatabaseManager`, fornece uma interface clara e consistente para manipulação dos dados, permitindo operações CRUD completas e consultas analíticas.
+Este sistema demonstra a implementação de um banco de dados relacional para a coleta de dados de sensores agrícolas, seguindo fielmente o modelo entidade-relacionamento definido na Fase 2 do projeto. A implementação em Python, fornece uma interface clara e consistente para manipulação dos dados, permitindo operações CRUD completas e consultas analíticas.
