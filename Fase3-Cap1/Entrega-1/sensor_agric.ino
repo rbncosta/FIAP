@@ -1,4 +1,4 @@
-/* ROBSON COSTA - RM
+/* ROBSON COSTA - RM - 565066
 
  * Sistema de Irrigação Inteligente - FarmTech Solutions
  * Este código implementa um sistema de monitoramento de solo e controle de irrigação
@@ -18,11 +18,11 @@
 #include <Arduino.h>
 
 // Definição dos pinos
-#define PIN_FOSFORO 12    // Botão para simular sensor de Fósforo
-#define PIN_POTASSIO 14   // Botão para simular sensor de Potássio
-#define PIN_PH_LDR 34     // LDR para simular sensor de pH
-#define PIN_UMIDADE 35    // Potenciômetro para simular sensor de umidade
-#define PIN_RELE 27       // Relé para controle da bomba de irrigação
+#define PIN_FOSFORO 17    // Botão para simular sensor de Fósforo
+#define PIN_POTASSIO 4    // Botão para simular sensor de Potássio
+#define PIN_PH_LDR 21     // LDR para simular sensor de pH
+#define PIN_UMIDADE 15    // Potenciômetro para simular sensor de umidade
+#define PIN_RELE 2        // Relé para controle da bomba de irrigação
 #define PIN_LED 2         // LED embutido para indicação visual
 
 // Variáveis para armazenar os valores dos sensores
