@@ -204,6 +204,6 @@ projeto/
 
 ## 📄 **Licença**
 
-Este projeto foi desenvolvido para fins acadêmicos (FIAP), como parte do desafio Hermes Reply - Fase 4.
+Este projeto foi desenvolvido para fins acadêmicos (FIAP), como parte do desafio - Hermes Reply / Fase 4.
 
 ---
