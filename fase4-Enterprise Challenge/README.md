@@ -3,7 +3,7 @@
 
 ### 🎯 **Visão Geral do Projeto**
 
-Este projeto simula um sistema completo de monitoramento industrial utilizando ESP32 e sensores virtuais, desenvolvido para o desafio da Hermes Reply. O sistema coleta dados de sensores em tempo real, analisa condições operacionais e gera alertas para manutenção preditiva.
+Este projeto simula um sistema completo de monitoramento industrial utilizando ESP32 e sensores virtuais, desenvolvido para o desafio da Fase4-Hermes Reply. O sistema coleta dados de sensores em tempo real, analisa condições operacionais e gera alertas para manutenção preditiva.
 
 ---
 
@@ -70,7 +70,8 @@ Este projeto simula um sistema completo de monitoramento industrial utilizando E
 ## 💻 **Código Fonte**
 
 ### **Linguagem:** C++ (Arduino Framework)
-### **Plataforma de Desenvolvimento:** PlatformIO + VSCode
+### **Linguagem:** Python
+### **Plataforma de Desenvolvimento:** VSCode + PlatformIO
 ### **Bibliotecas Utilizadas:**
 - `DHT.h` - Leitura do sensor DHT22
 - `Wire.h` - Comunicação I2C com MPU6050
@@ -83,7 +84,7 @@ Este projeto simula um sistema completo de monitoramento industrial utilizando E
 - Comunicação serial para monitoramento
 - Análise de status em tempo real
 
-### **Arquivo Principal:** [`sistema_csv_automatico.cpp`](codigo/sistema_csv_automatico.cpp)
+### **Arquivo Principal:** [`prog1.cpp`](codigo/prog1.cpp)
 
 ---
 
@@ -126,6 +127,7 @@ Timestamp,Temperatura,Umidade,Luminosidade,Accel_X,Accel_Y,Accel_Z,Gyro_X,Gyro_Y
 3. **Distribuição de Status Operacionais** - Pizza
 4. **Análise de Vibração por Eixo** - Barras agrupadas
 5. **Matriz de Correlação** - Heatmap
+6. **Dash Completo** - Dash Completo
 
 ### **Insights Principais:**
 - **Correlação forte** entre temperatura e vibração (r=0.869)
@@ -133,70 +135,29 @@ Timestamp,Temperatura,Umidade,Luminosidade,Accel_X,Accel_Y,Accel_Z,Gyro_X,Gyro_Y
 - **Padrões identificados** para manutenção preditiva
 - **40% Normal, 40% Alerta, 20% Crítico** na distribuição de status
 
-### **Arquivo de Análise:** [`analise_dados.py`](codigo/analise_dados.py)
+### **Arquivo de Análise:** [`Monitor_Serial_Gerado_Automaticamente.csv`](evidencias/Monitor_Serial_Gerado_Automaticamente.csv)
+### **Arquivo de Análise:** [`Monitor_Serial_Gerado_Automaticamente.txt`](evidencias/Monitor_Serial_Gerado_Automaticamente.txt)
 
 ---
-
-## 🚀 **Como Executar**
-
-### **Pré-requisitos:**
-```bash
-# Instalar PlatformIO
-pip install platformio
-
-# Instalar biblioteca para captura automática
-pip install pyserial
-```
-
-### **Passo a Passo:**
-
-#### **1. Configurar Projeto PlatformIO:**
-```bash
-# Criar projeto
-pio project init --board esp32dev
-
-# Copiar arquivos
-cp sistema_csv_automatico.cpp src/main.cpp
-cp platformio.ini ./
-cp wokwi.toml ./
-```
-
-#### **2. Compilar e Executar:**
-```bash
-# Compilar
-pio run
-
-# Executar no Wokwi
-# Ctrl+Shift+P → "Wokwi: Start Simulator"
-```
-
-#### **3. Capturar Dados (Opcional):**
-```bash
-# Executar capturador automático
-python capturador_automatico.py
-```
 
 ### **Estrutura de Arquivos:**
 ```
 projeto/
-├── src/main.cpp                    # Código principal
-├── platformio.ini                  # Configuração PlatformIO
-├── wokwi.toml                      # Configuração Wokwi
 ├── codigo/
-│   ├── sistema_csv_automatico.cpp  # Código completo
-│   ├── analise_dados.py           # Script de análise
+│   ├── prog1.cpp  # Código completo
 │   └── capturador_automatico.py   # Capturador CSV
-├── dados/
-│   ├── exemplo_csv_1_minuto.csv   # Dados de exemplo
-│   └── dados_simulados.csv        # Dataset completo
-├── imagens/
-│   ├── circuito_completo.png      # Esquema do circuito
-│   ├── simulacao_funcionando.png  # Simulação em execução
-│   └── graficos/                   # Gráficos de análise
-├── documentacao/
-│   ├── especificacoes_tecnicas.md # Documentação técnica
-│   ├── guia_instalacao.md         # Guia de instalação
-│   └── relatorio_final.md         # Relatório completo
+├── evidencias/
+│   ├── Monitor_Serial_Gerado_Automaticamente.csv   # Evidencia do monitor serial
+│   └── Monitor_Serial_Gerado_Automaticamente.txt   # Evidencia do monitor serial
+│   └── Print-Circuito-VsCode.png                   # Imagem do circuito no VsCode
+│   └── Print-Circuito-Wokwi.png                    # Imagem do circuito no WokWi
+├── graficos/
+│   ├── 01_evolucao_temperatura.png      # Gráfico de análise
+│   ├── 02_correlacao_temp_vibracao.png  # Gráfico de análise
+│   ├── 03_distribuicao_status.png       # Gráfico de análise
+│   ├── 04_vibracao_por_eixo.png         # Gráfico de análise
+│   ├── 05_matriz_correlacao.png         # Gráfico de análise
+│   ├── 06_dashboard_completo.png        # Gráfico de análise
 └── README.md                       # Este arquivo
 ```
 
@@ -224,11 +185,9 @@ projeto/
 
 ---
 
-## 👥 **Equipe**
+## 👥 **Projeto executado de forma individual por:**
 
-### **Desenvolvedor Principal:**
-- **Nome:** [Seu Nome]
-- **Função:** Desenvolvimento completo do sistema
+- **Nome:** Robson Costa
 - **Responsabilidades:** 
   - Arquitetura do sistema
   - Programação do ESP32
@@ -244,19 +203,8 @@ projeto/
 
 ---
 
-## 📞 **Contato e Suporte**
-
-### **Repositório GitHub:** [Link do Repositório]
-### **Documentação Técnica:** [`documentacao/`](documentacao/)
-### **Issues e Sugestões:** [GitHub Issues]
-
----
-
 ## 📄 **Licença**
 
-Este projeto foi desenvolvido para fins acadêmicos como parte do desafio Hermes Reply - Fase 4.
+Este projeto foi desenvolvido para fins acadêmicos (FIAP), como parte do desafio Hermes Reply - Fase 4.
 
 ---
-
-**Desenvolvido com 💙 para o futuro da Indústria 4.0**
-
