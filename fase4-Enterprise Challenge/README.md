@@ -14,9 +14,8 @@ Este projeto simula um sistema completo de monitoramento industrial utilizando E
 3. [Código Fonte](#código-fonte)
 4. [Simulação e Dados](#simulação-e-dados)
 5. [Análise de Dados](#análise-de-dados)
-6. [Como Executar](#como-executar)
-7. [Resultados](#resultados)
-8. [Equipe](#equipe)
+6. [Resultados](#resultados)
+7. [Equipe](#equipe)
 
 ---
 
@@ -185,8 +184,9 @@ projeto/
 
 ---
 
-## 👥 **Projeto executado de forma individual por:**
+## 👥 **Equipe**
 
+- **Projeto executado de forma individual por:**
 - **Nome:** Robson Costa
 - **Responsabilidades:** 
   - Arquitetura do sistema
