@@ -186,8 +186,7 @@ projeto/
 
 ## 👥 **Equipe**
 
-- **Projeto executado de forma individual por:**
-- **Nome:** Robson Costa
+- **Projeto executado de forma individual por:** Robson Costa
 - **Responsabilidades:** 
   - Arquitetura do sistema
   - Programação do ESP32
