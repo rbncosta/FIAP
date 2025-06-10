@@ -62,7 +62,7 @@ Este projeto simula um sistema completo de monitoramento industrial utilizando E
 - Resistor 10kΩ entre 3.3V e GPIO 34 (pull-up)
 
 ### **Esquema do Circuito:**
-![Circuito Virtual](imagens/circuito_completo.png)
+![Circuito Virtual](evidencias/Print-Circuito-Wokwi.png)
 
 ---
 
